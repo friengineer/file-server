@@ -10,9 +10,9 @@ public class Client {
 	// Data being sent to the server
 	private BufferedWriter output;
 	// Data being read from a file
-  private BufferedInputStream fileReader;
-  // Data being written to a file
-  private BufferedOutputStream fileWriter;
+	private BufferedInputStream fileReader;
+	// Data being written to a file
+	private BufferedOutputStream fileWriter;
 
 	// Constructor attempts to connect to the server and create input and output streams for the socket
 	public Client() {
@@ -85,10 +85,10 @@ public class Client {
 
 	// Checks if the requested file exists on the client side
 	private boolean fileExists(String filename) {
-    File file = new File("clientFiles/" + filename);
+		File file = new File("clientFiles/" + filename);
 
-    return file.isFile();
-  }
+		return file.isFile();
+	}
 
 	// Interprets the user input and performs the request
 	public void request(String[] arguments) {
@@ -103,11 +103,11 @@ public class Client {
 				while((response = this.getInput().readLine()) != null) {
 					System.out.println(response);
 				}
-      }
+			}
 			else if(arguments[0].equals("get")) {
 				if(arguments.length < 2) {
-          System.err.println("Please provide a filename");
-        }
+					System.err.println("Please provide a filename");
+				}
 				else {
 					this.getOutput().write("get");
 					this.getOutput().newLine();
@@ -134,7 +134,7 @@ public class Client {
 						System.out.println("File successfully downloaded");
 					}
 				}
-      }
+			}
 			else if(arguments[0].equals("put")) {
 				if(arguments.length < 2) {
 					System.err.println("Please provide a filename");

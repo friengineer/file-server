@@ -9,7 +9,7 @@ public class Server {
 	// Implements an executor server
 	private ExecutorService service = null;
 
-  // Constructor attempts to bind to a port and initialise the executor server
+	// Constructor attempts to bind to a port and initialise the executor server
 	public Server() {
 		try {
 			setPort(new ServerSocket(8888));
@@ -21,7 +21,7 @@ public class Server {
 		}
 	}
 
-  // Returns the value for the port state variable
+	// Returns the value for the port state variable
 	public ServerSocket getPort() {
 		return this.port;
 	}
