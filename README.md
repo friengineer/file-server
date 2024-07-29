@@ -2,8 +2,8 @@
 Server and client programs to host a file server for clients to download and upload files from and to. Uses an exectuor server with a fixed thread pool.
 
 Compile the program by running the following commands from the root directory.
-```
-javac ./client/Client.java \
+```shell
+$ javac ./client/Client.java \
 ./server/*.java
 ```
 Execute the server by navigating to the `server` directory and running `java Server`.
